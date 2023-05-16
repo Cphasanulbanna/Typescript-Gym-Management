@@ -1,5 +1,8 @@
+//COMPONENTS
+import NavBar from "@/components/navbar";
+
 function App() {
-    return <div>App</div>;
+  return <NavBar />;
 }
 
 export default App;
