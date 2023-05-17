@@ -25,13 +25,16 @@ type Props = {
 const NavBar = ({ selectedPage, setSelectedPage, isTopOfPage }: Props) => {
   //STATES
   const [toggleMenu, setToggleMenu] = useState<boolean>(false);
+
   //TAILWIND CLASSES
   const flexBetween = "flex items-center justify-between";
 
+  //DYNAMICALLY ADDING BG FOR HEADER
   const navbarBackground = isTopOfPage ? "" : "bg-primary-100 drop-shadow";
 
   //MEDIA QUERY HOOK
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px )");
+
   return (
     <nav className="">
       <div

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 //COMPONENTS
 import NavBar from "@/components/navbar";
+import Home from "@/components/home";
 
 //ENUM DATA TYPE
 import { SelectedPage } from "./shared/types";
@@ -26,11 +27,14 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <NavBar
-      selectedPage={selectedPage}
-      setSelectedPage={setSelectedPage}
-      isTopOfPage={isTopOfPage}
-    />
+    <div className="app bg-gray-20">
+      <NavBar
+        selectedPage={selectedPage}
+        setSelectedPage={setSelectedPage}
+        isTopOfPage={isTopOfPage}
+      />
+      <Home setSelectedPage={setSelectedPage} />
+    </div>
   );
 }
 
